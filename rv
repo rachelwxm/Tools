@@ -1,0 +1,17 @@
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
+DAY=$(date +%d)
+HOUR=$(date +%H)
+
+TRASH_BIN_HOME="$HOME/TRASH"
+trash_bin_dir="${TRASH_BIN_HOME}/${YEAR}_${MONTH}_${DAY}_${HOUR}"
+
+if [ ! -d ${trash_bin_dir} ]
+then
+	mkdir ${trash_bin_dir}
+fi
+
+for file in $@
+do
+	mv ${file} ${trash_bin_dir}/
+done
