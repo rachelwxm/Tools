@@ -73,3 +73,17 @@ Example:
 	--out output.txt
 ```
 
+## get_sub_sequence.pl
+
+从fa文件中提取目标区域的子序列。
+
+```
+perl get_sub_sequence.pl <ref.fa> <pos_table> <expand_length[default=0]>
+
+pos_table format as:
+	chr	start	end
+example:
+14    105239224    105239224
+5    112043580    112043580
+11    108106405    108106405
+```
